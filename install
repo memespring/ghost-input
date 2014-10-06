@@ -9,11 +9,8 @@ sudo apt-get install unclutter
 wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 sudo python get-pip.py
 
-# clone repo
-git clone 
-
-
 # install requirements
+sudo pip install -r ~/ghost-input/requirements.txt
 
 # reboot
 sudo reboot
