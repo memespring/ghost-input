@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <form action="" method="post">
+    <input type="text" id="title" name="title" value="{{post['title']}}">
+<textarea id="markdown" name="markdown">
+{% if post %}
+{{post['markdown']}}
+{% endif %}
+</textarea>
+    <button id="save" type="submit">Save</button>
+  </form>
+
+  <script charset="utf-8">
+
+    var editor = CodeMirror.fromTextArea(document.getElementById('markdown'));
+
+    function save(){
+
+      split_url = window.location['pathname'].split('/');
+      post_id = split_url[split_url.length  -1];
+      title = $('#title').val();
+      editor.save();
+      markdown = $('#markdown').val();
+
+      $.post("/edit/" + post_id, {'title': title, 'markdown': markdown})
+      .done(function() {
+        console.log("success");
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+
+      setTimeout( 'save()', 3000);
+
+    }
+
+    $(document).ready(function(){
+
+      //progressive enhancement
+      $('#save').hide();
+      editor.focus();
+
+      //key bindings
+      $(document).keydown(function(event){
+        var key = event.keyCode || event.which;
+        if(key == 27){
+          save();
+          window.location = '/';
+        }
+
+      });
+
+      //save
+      save();
+    });
+
+  </script>
+
+{% endblock %}

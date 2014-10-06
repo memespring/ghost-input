@@ -1,0 +1,17 @@
+- refactor api binding
+- markdown help + key binding
+- move save rate to config file
+- redirect after signin
+- return consistant objects from api binding
+- ability to publish
+- proper form class
+- ability to edit title and url
+- handle expired session / refresh token 
+
+DONE:
+
+- return to home on escape
+- create new posts
+- navigate menu
+- move new post fo menu
+- focus to codemirror

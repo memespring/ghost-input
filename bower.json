@@ -1,0 +1,21 @@
+{
+  "name": "ghost-input",
+  "version": "0.0.0",
+  "authors": [
+    "Richard Pope <richard@memespring.co.uk>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "codemirror": "~4.5.0",
+    "jquery": "~2.1.1"
+  }
+}

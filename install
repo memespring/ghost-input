@@ -1,0 +1,19 @@
+#!/bin/sh
+sudo apt-get install matchbox
+sudo apt-get install x11-xserver-utils
+sudo apt-get install unclutter
+
+#create start up file: http://www.ediy.com.my/index.php/blog/item/102-raspberry-pi-running-midori-browser-without-a-desktop
+
+# install pip
+wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+sudo python get-pip.py
+
+# clone repo
+git clone 
+
+
+# install requirements
+
+# reboot
+sudo reboot

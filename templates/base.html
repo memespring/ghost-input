@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <script type="text/javascript"  src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='vendor/codemirror/lib/codemirror.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='vendor/codemirror/mode/markdown/markdown.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/codemirror/lib/codemirror.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <div class="container">
+      {% block content %}{% endblock %}
+  </div>
+</body>

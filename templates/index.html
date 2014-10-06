@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Hello</h1>
+  <ul class="menu">
+    {% for post in posts %}
+      <li>
+        <a href="{{url_for('edit', post_id=post['id'])}}">{{post['title']}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <form action="" method="post">
+    <button type="submit">New post</button>
+  </form>
+
+  <script charset="utf-8">
+    $(document).ready(function(){
+
+      function selectItem(direction){
+
+        current = $('ul.menu li.selected');
+        progress = true;
+
+        if (direction == 'up' && current.is(':first-child')){
+          progress = false;
+        }
+        if (direction == 'down' && current.is(':last-child')){
+          progress = false;
+        }
+
+        if (progress == true){
+          current.removeClass('selected');
+          if(direction == 'up'){
+            current.prev().addClass('selected');
+            current.prev().focus();
+          }else{
+            current.next().addClass('selected');
+            current.next().focus();
+          }
+        }
+
+      }
+
+      function navigate(){
+        $('ul.menu li.selected a')[0].click();
+      }
+
+      //progressive enhancement
+      $('form').hide();
+      newPostMenuItem = $('<li><a href="#">New post</a></li>')
+      newPostMenuItem.children(":first").click(
+        function(){
+          $('form').submit();
+        });
+      $('ul.menu').prepend(newPostMenuItem);
+      $('ul.menu li:first-child').addClass('selected');
+
+
+      //key bindings
+      $(document).keydown(function(event){
+        var key = event.keyCode || event.which;
+        if(key == 38){
+          selectItem('up');
+        }else if(key == 40){
+          selectItem('down');
+        }else if(key == 13){
+          navigate();
+        }
+
+      });
+
+    });
+  </script>
+{% endblock %}
