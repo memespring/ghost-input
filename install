@@ -16,7 +16,7 @@ xset -dpms     # disable DPMS (Energy Star) features.
 xset s off       # disable screen saver
 xset s noblank # don't blank the video device
 unclutter &
-python ghost-input/app.py &
+python /home/pi/ghost-input/app.py &
 matchbox-window-manager &
 midori -e Fullscreen -a http://localhost:5000
 EOF
@@ -28,7 +28,7 @@ wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 sudo python get-pip.py
 
 # install requirements
-sudo pip install -r ~/ghost-input/requirements.txt
+sudo pip install -r /home/pi/ghost-input/requirements.txt
 
 # reboot
 sudo reboot
