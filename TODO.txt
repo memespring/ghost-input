@@ -6,7 +6,8 @@
 - ability to publish
 - proper form class
 - ability to edit title and url
-- handle expired session / refresh token 
+- handle expired session / refresh token
+- set focus to login form
 
 DONE:
 
