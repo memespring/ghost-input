@@ -2,6 +2,10 @@ body {
   font-family:sans-serif;
 }
 
+body, input, button{
+  font-size:40px;
+}
+
 h1 {
   text-align:center;
 }
@@ -22,10 +26,12 @@ label {
 input {
   width:100%;
   padding:0.2em 0;
+  margin-bottom:0.6em;
 }
 
 button {
   width:100%;
+  padding:0.2em 0;
 }
 
 form div.error{

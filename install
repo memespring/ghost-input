@@ -8,6 +8,7 @@
 sudo apt-get install matchbox
 sudo apt-get install x11-xserver-utils
 sudo apt-get install unclutter
+sudo apt-get install midori
 
 #create start up file: http://www.ediy.com.my/index.php/blog/item/102-raspberry-pi-running-midori-browser-without-a-desktop
 cat > /home/pi/startGhost << EOF
