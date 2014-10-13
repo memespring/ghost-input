@@ -18,8 +18,6 @@ class Ghost:
           {'grant_type': 'password', 'client_id': 'ghost-admin',  'username': email, 'password': password}
         )
 
-        print response.status_code
-        print response.text
         if response.status_code == 200:
             data = json.loads(response.text)
             self.access_token = data['access_token']

@@ -2,6 +2,7 @@
 <html>
 <head>
   <script type="text/javascript"  src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+  <script type="text/javascript"  src="{{ url_for('static', filename='vendor/smoothstate/jquery.smoothState.js') }}"></script>
   <script type="text/javascript"  src="{{ url_for('static', filename='vendor/codemirror/lib/codemirror.js') }}"></script>
   <script type="text/javascript"  src="{{ url_for('static', filename='vendor/codemirror/mode/markdown/markdown.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>
@@ -11,7 +12,15 @@
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-  <div class="container">
+  <div id="main" class="container">
       {% block content %}{% endblock %}
   </div>
+
+  <script charset="utf-8">
+    // Contents of functions.js
+    ;(function ($) {
+        $('#main').smoothState();
+    })(jQuery);
+
+  </script>
 </body>

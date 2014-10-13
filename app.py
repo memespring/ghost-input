@@ -28,7 +28,6 @@ def index():
         new_post = ghost.create_post()
         return redirect(url_for('edit', post_id=new_post['id']))
 
-
     drafts = ghost.get_drafts()
     return render_template('index.html', posts=drafts['posts'])
 
@@ -41,7 +40,6 @@ def edit(post_id):
 
     post = ghost.get_post(post_id)
     return render_template('editor.html', post=post)
-
 
 @app.route("/signin", methods=['GET', 'POST'])
 def signin():
