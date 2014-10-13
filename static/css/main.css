@@ -10,6 +10,11 @@ h1 {
   text-align:center;
 }
 
+a, a:visited {
+  text-decoration:none;
+  color:#2A6496;
+}
+
 .message {
   text-align:center;
   padding: 1em;
@@ -38,6 +43,30 @@ form div.error{
   background:#eee;
 }
 
-ul.menu li.selected{
-  background: red
+ul.menu {
+  border-top:solid 1px #428BCA;
+  list-style-type:none;
+  padding:0;
+}
+
+ul.menu li {
+  padding:12px 12px;
+  border-bottom:solid 1px #428BCA;
+}
+
+ul.menu li.selected {
+  background: #428BCA;
+}
+
+ul.menu li.selected a {
+  color:#fff;
+}
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+}
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
 }

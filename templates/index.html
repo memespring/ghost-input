@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Hello</h1>
+  <h1>blog.memespring.co.uk</h1>
   <ul class="menu">
     {% for post in posts %}
       <li>
@@ -46,7 +46,7 @@
 
       //progressive enhancement
       $('form').hide();
-      newPostMenuItem = $('<li><a href="#">New post</a></li>')
+      newPostMenuItem = $('<li><a href="#"><strong>Write something</strong></a></li>')
       newPostMenuItem.children(":first").click(
         function(){
           $('form').submit();

@@ -14,4 +14,11 @@
     {{ render_field(form.password) }}
     <button type="submit">Sign in</button>
   </form>
+
+  <script charset="utf-8">
+    $(document).ready(function(){
+      $('form button[type="submit"]').hide();
+      $('#email').focus();
+    });
+  </script>
 {% endblock %}

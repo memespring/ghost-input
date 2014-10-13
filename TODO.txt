@@ -1,13 +1,18 @@
 - refactor api binding
 - markdown help + key binding
-- move save rate to config file
-- redirect after signin
+- move save-rate to config file
 - return consistant objects from api binding
 - ability to publish
 - proper form class
 - ability to edit title and url
 - handle expired session / refresh token
-- set focus to login form
+- wait for flask server to start before launching midori
+- @ key mapping
+- ajax page transitions
+- settings page (to enable / disable vim mappings)
+- add blog url to settings
+- page titles
+- ability to delete drafts
 
 DONE:
 
@@ -16,3 +21,8 @@ DONE:
 - navigate menu
 - move new post fo menu
 - focus to codemirror
+- hide login button - NO MOUSE!
+- code mirror should be full height
+- style menu
+- set focus to login form
+- redirect after signin
